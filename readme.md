@@ -1,13 +1,7 @@
-CPS School Locator
+TPS School Locator
 ======
 
-Valid for School Year: 2017-18
-
----
-
-
-The CPS School Locator is a tool used to search for and compare schools in the Chicago Public School system. [View the live map](http://cps.edu/map)
-
+The TPS School Locator is a tool used to search for and compare schools in the Tulsa Public School system.
 
 
 >The CPS School Locator allows you to search for your neighborhood school, search for schools within a radius of an address, search for schools within a zip code, and search for schools close to your current location.
