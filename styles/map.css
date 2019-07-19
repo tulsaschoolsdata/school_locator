@@ -3,7 +3,6 @@
 body, html {
   height: 100%;
   overflow-x: hidden;
-  /*background-color: #FFF;*/
 }
 
 :focus, :active, a:focus, a:active, .btn:focus, .btn:active {
@@ -11,9 +10,6 @@ body, html {
   text-decoration: none;
 }
 
-/*.ui-autocomplete    { max-height:100% !important; left:65px !important; max-width:400px !important; }*/
-/*.section-left { top:60px; left: 0; right: 600px; position: absolute; height:auto; z-index: 1; } */
-/*.section-full {  left: 0; right: 0; position: relative; height: 100%; min-height: 400px; z-index: 1; overflow-y:auto; overflow-x:hidden;}*/
 #map_canvas {
   left: 0;
   top: 0;
@@ -202,16 +198,6 @@ body, html {
   z-index: 6;
 }
 
-/*#divHelpContainer #btnHelp2,
-#divAdvancedContainer #btnAdvancedSearch2
-                        {   margin-bottom:3px; display: block;
-                            border-top-left-radius: 23px;
-                            border-bottom-left-radius: 23px;
-                            border-top-right-radius: 0px;
-                            border-bottom-right-radius: 0px;
-                            padding-right: 5px;
-                            padding-left: 12px;
-                        }*/
 .backgroundfillwhite {
   background-color: #E4F2FC;
 }
@@ -245,16 +231,6 @@ body, html {
   padding-left: 12px;
 }
 
-/*
-#divBtnContainer button:focus,
-#resultCountPoly button:focus,
-#resultCount button:focus,
-#pinLocAlert button:focus,
-.resultdetaildiv button:focus,
-#resultList button:focus,
-#divDetailContainer button:focus
-                                {outline:none;}
-*/
 #btnCloseStreetview {
   position: absolute;
   top: 3px;
@@ -291,7 +267,6 @@ button.compareHeart:active {
   line-height: 1em;
 }
 
-/*#divBtnContainer .reducedTxtSize { font-size:60%;}*/
 #divSearchContainer .reducedTxtSize {
   font-size: 10px;
   line-height: 1em;
@@ -299,16 +274,6 @@ button.compareHeart:active {
   padding-top: 0px;
 }
 
-/*not used*/
-.section-right {
-  top: 0;
-  bottom: 0;
-  left: 30%;
-  right: 0;
-  position: absolute;
-  height: 100%;
-  z-index: 3;
-}
 
 /*not used*/
 #collapseSettings,

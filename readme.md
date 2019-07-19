@@ -36,8 +36,6 @@ There are four types of search results:
 
 This example will return the neighborhood high school for a student residing at 1234 N Western. http://cps.edu/ScriptLibrary/Map-SchoolLocator/index.html?Address=1234+N+Western+Chicago+IL+60622&Type=HS
 
-
-
 >To show all schools, click the Magnifying Glass when the input box is empty.
 
 ## Compare Schools
@@ -90,24 +88,16 @@ An overlay is a transparent layer of additional information that appears on top 
  * Introductory tour
  * LSC Boundaries
 
-
-
 **How to make a School Locator for your district**
-
-The code posted here is the actual code used in the CPS School Locator so it is particular to the data that is used in CPS. It is not "templetized" - it is a work in progress. It is posted here to show you how we did it and hopefully, help get you started in developing your own locator.
 
 
 
 ## Dependencies
- * [Google Fusion Tables](https://support.google.com/fusiontables/answer/184641)
  * [Google Maps](https://developers.google.com/maps/documentation/javascript/)
  * [jQuery](http://jquery.com/)
  * [Hopscotch](https://github.com/linkedin/hopscotch)
  * [Bootstrap](http://getbootstrap.com/)
  * [FontAwesome](http://fontawesome.io/)
- * [FusionTips](https://github.com/derekeder/fusiontips)
 
 
-
-
-Copyright (c) 2017 Chicago Public Schools. Released under the MIT License.
+Copyright (c) 2019 Tulsa Public Schools. Released under the MIT License.

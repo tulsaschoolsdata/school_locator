@@ -12,7 +12,6 @@
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <!-- <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> -->
 
     <!-- Icons -->
 
@@ -20,11 +19,8 @@
     <link rel="apple-touch-icon" href="images/nonretina76x76.png" sizes="76x76"/>
     <link rel="apple-touch-icon" href="images/iphone120x120.png" sizes="120x120"/>
     <link rel="apple-touch-icon" href="images/iPad152x152.png" sizes="152x152"/>
-    <!-- <link rel="apple-touch-startup-image" href="images/startup.png"> -->
 
     <title>TPS School Locator</title>
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBgH1Z_xKIjf1FVwvexUWfW-2FEhUjvF8&callback=initializeMap" async defer></script> -->
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBgH1Z_xKIjf1FVwvexUWfW-2FEhUjvF8&libraries=visualization"></script> -->
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBgH1Z_xKIjf1FVwvexUWfW-2FEhUjvF8&libraries=places"></script>
 
@@ -59,11 +55,7 @@
 
     <script>
       $(document).ready(function () {
-
-        //$("#autocomplete").geocomplete();
-
         initializeMap();
-
         // init the compare info popovers
         $(".compareInfo").popover({trigger: 'click', html: true});
 
@@ -241,15 +233,10 @@
           }
         });
 
-        //hide the clear button (x) when clicking out of autocomplete $("#autocomplete").on("blur", function () {    $("#btnClearSearch").css("display","none"); });
-
         $('#divResultsContainer').on('shown.bs.collapse', function (e) {
-          //console.log("shown collapseResultsHomeList");
           e.stopPropagation();
           adjustResultsHeight();
         });
-
-        // set the top of the results var bottomofsearch = $('#divSearchContainer').position().top+$('#divSearchContainer').outerHeight(true); $('#collapseResults').css('top', bottomofsearch );
 
       });
     </script>
@@ -346,7 +333,6 @@
             <div class="col-xs-12">
               <div class="clearfix">
 
-                <!-- <button type="button" id="btnCompare" class="btn btn-default btn-xs pull-left" onClick="compareSchools();"> <span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span> Compare </button> -->
                 <button type="button" id="btnSearchRadius" class="btn btn-default btn-xs">
                   <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
                   More Schools
@@ -654,42 +640,10 @@
                           <a href="http://chicagoearlylearning.org/" target="_blank">More pre-K options</a>
                         </div>
                       </li>
-
-                      <!-- <li> <span class="label-grey"> <label for='pt31'> <input name='pt' type='radio' id='pt31' onclick='togglePT("Academic_Center");' /> Academic Center </label> </span> </li> <li> <span class="label-grey"> <label for='pt01'> <input name='pt'
-                      type='radio' id='pt01' onclick='togglePT("Agricultural_Sciences");' /> Agricultural Sciences </label> </span> </li> <li> <span class="label-grey"> <label for='pt02'> <input name='pt' type='radio' id='pt02'
-                      onclick='togglePT("Agriculture_and_Horticulture");' /> Agriculture and Horticulture </label> </span> </li> <li> <span class="label-grey"> <label for='pt03'> <input name='pt' type='radio' id='pt03' onclick='togglePT("Business_and_Finance");' />
-                      Business and Finance </label> </span> </li> <li> <span class="label-grey"> <label for='pt04'> <input name='pt' type='radio' id='pt04' onclick='togglePT("Career_and_Technical_Education_College_and_Career_Academy");' /> CTE - College and Career
-                      Academies </label> </span> </li> <li> <span class="label-grey"> <label for='pt05'> <input name='pt' type='radio' id='pt05' onclick='togglePT("Childrens_Engineering");' /> Children's Engineering </label> </span> </li> <li> <span class="label-grey">
-                      <label for='pt32'> <input name='pt' type='radio' id='pt32' onclick='togglePT("Classical");' /> Classical </label> </span> </li> <li> <span class="label-grey"> <label for='pt06'> <input name='pt' type='radio' id='pt06'
-                      onclick='togglePT("Comprehensive_Gifted");' /> Comprehensive Gifted </label> </span> </li> <li> <span class="label-grey"> <label for='pt07'> <input name='pt' type='radio' id='pt07' onclick='togglePT("Construction_and_Architecture");' /> Construction
-                      and Architecture </label> </span> </li> <li> <span class="label-grey"> <label for='pt08'> <input name='pt' type='radio' id='pt08' onclick='togglePT("Culinary_and_Hospitality");' /> Culinary and Hospitality </label> </span> </li> <li> <span
-                      class="label-grey"> <label for='pt09'> <input name='pt' type='radio' id='pt09' onclick='togglePT("Dual_Immersion");' /> Dual Immersion </label> </span> </li> <li> <span class="label-grey"> <label for='pt11'> <input name='pt' type='radio' id='pt11'
-                      onclick='togglePT("Education_and_Training");' /> Education and Training </label> </span> </li> <li> <span class="label-grey"> <label for='pt33'> <input name='pt' type='radio' id='pt33' onclick='togglePT("English_Language_Learners");' /> English
-                      Language Learners </label> </span> </li> <li> <span class="label-grey"> <label for='pt12'> <input name='pt' type='radio' id='pt12' onclick='togglePT("Engineering");' /> Engineering </label> </span> </li> <li> <span class="label-grey"> <label
-                      for='pt13'> <input name='pt' type='radio' id='pt13' onclick='togglePT("Fine_Performing_Arts");' /> Fine Performing Arts </label> </span> </li> <li> <span class="label-grey"> <label for='pt14'> <input name='pt' type='radio' id='pt14'
-                      onclick='togglePT("Health_Science");' /> Health Science </label> </span> </li> <li> <span class="label-grey"> <label for='pt15'> <input name='pt' type='radio' id='pt15' onclick='togglePT("Humanities");' /> Humanities </label> </span> </li> <li> <span
-                      class="label-grey"> <label for='pt16'> <input name='pt' type='radio' id='pt16' onclick='togglePT("Information_Technology");' /> Information Technology </label> </span> </li> <li> <span class="label-grey"> <label for='pt17'> <input name='pt'
-                      type='radio' id='pt17' onclick='togglePT("International_Baccalaureate");' /> International Baccalaureate </label> </span> </li> <li> <span class="label-grey"> <label for='pt35'> <input name='pt' type='radio' id='pt35'
-                      onclick='togglePT("International_Gifted");' /> International Gifted </label> </span> </li> <li> <span class="label-grey"> <label for='pt18'> <input name='pt' type='radio' id='pt18' onclick='togglePT("JROTC");' /> JROTC </label> </span> </li> <li>
-                      <span class="label-grey"> <label for='pt19'> <input name='pt' type='radio' id='pt19' onclick='togglePT("Law_Public_Safety_and_Security");' /> Law Public Safety and Security </label> </span> </li> <li> <span class="label-grey"> <label for='pt20'>
-                      <input name='pt' type='radio' id='pt20' onclick='togglePT("Literature_Writing");' /> Literature Writing </label> </span> </li> <li> <span class="label-grey"> <label for='pt24'> <input name='pt' type='radio' id='pt24'
-                      onclick='togglePT("Manufacturing");' /> Manufacturing </label> </span> </li> <li> <span class="label-grey"> <label for='pt25'> <input name='pt' type='radio' id='pt25' onclick='togglePT("Math_Science");' /> Math Science </label> </span> </li> <li>
-                      <span class="label-grey"> <label for='pt26'> <input name='pt' type='radio' id='pt26' onclick='togglePT("Media_and_Communication_Arts");' /> Media and Communication Arts </label> </span> </li> <li> <span class="label-grey"> <label for='pt27'> <input
-                      name='pt' type='radio' id='pt27' onclick='togglePT("Military_Academy");' /> Military Academy </label> </span> </li> <li> <span class="label-grey"> <label for='pt28'> <input name='pt' type='radio' id='pt28' onclick='togglePT("Montessori");' />
-                      Montessori </label> </span> </li> <li> <span class="label-grey"> <label for='pt29'> <input name='pt' type='radio' id='pt29' onclick='togglePT("Personal_Care_Services");' /> Personal Care Services </label> </span> </li> <li> <span class="label-grey">
-                      <label for='pt30'> <input name='pt' type='radio' id='pt30' onclick='togglePT("Scholastic_Academy");' /> Scholastic Academy </label> </span> </li> <li> <span class="label-grey"> <label for='pt38'> <input name='pt' type='radio' id='pt38'
-                      onclick='togglePT("Specific_Aptitude");' /> Specific Aptitude </label> </span> </li> <li> <span class="label-grey"> <label for='pt39'> <input name='pt' type='radio' id='pt39' onclick='togglePT("STEM");' /> STEM </label> </span> </li> <li> <span
-                      class="label-grey"> <label for='pt40'> <input name='pt' type='radio' id='pt40' onclick='togglePT("Technology");' /> Technology </label> </span> </li> <li> <span class="label-grey"> <label for='pt41'> <input name='pt' type='radio' id='pt41'
-                      onclick='togglePT("Transportation");' /> Transportation </label> </span> </li> <li> <span class="label-grey"> <label for='pt42'> <input name='pt' type='radio' id='pt42' onclick='togglePT("World_Language");' /> World Language </label> </span> </li>
-                      -->
-
                     </ul>
-
                   </div>
                 </div>
-
               </div>
-
             </div>
 
             <!-- Update and Reset buttons - Advanced (Filtered) Search -->
@@ -738,8 +692,6 @@
           <span class="fa-stack fa-2x">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-align-justify fa-stack-1x fa-inverse"></i>
-            <!-- <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i> -->
-            <!-- <i class="fa fa-check-square-o fa-stack-1x fa-inverse"></i> -->
           </span>
         </button>
 
@@ -798,25 +750,10 @@
               <td colspan="17">
                 <h4>Compare Schools
                   <i class="fa fa-check-square-o fa-lg"></i>
-                  <!-- <a id="btnExportCompare" onclick="exportCompareTable();" class="btn btn-default btn-xs"> EXPORT (beta) <i class="fa fa-share-square" aria-hidden="true"></i></a> <a id="btnEmailCompare" onclick="emailCompareTable();" class="btn btn-default
-                  btn-xs"> Email (beta) <i class="fa fa-share-square" aria-hidden="true"></i></a> -->
                 </h4>
               </td>
             </tr>
             <tr style="color:#36c; background-color:#C8DAFF;">
-              <th>
-                <!-- <button id="btnCompare" type="button" class="btnCompare markerhelp3" -->
-                <!-- data-toggle="tooltip" title="Compare Schools"> -->
-                <!-- <i class="fa fa-chevron-circle-down fa-2x"></i> -->
-                <!-- <span class="fa-stack fa-2x"> -->
-                <!-- <i class="fa fa-circle fa-stack-2x"></i> -->
-                <!-- <i class="fa fa-chevron-down fa-stack-1x fa-inverse"></i> -->
-                <!-- <i class="fa fa-check-square-o fa-stack-1x fa-inverse"></i> -->
-                <!-- <i class="fa fa-heart fa-stack-1x fa-inverse"></i> -->
-                <!-- </span> -->
-                <!-- </button> -->
-              </th>
-
               <th>Name</th>
               <th># of Students</th>
               <th>Rating
@@ -1377,10 +1314,8 @@
                 </div>
 
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -1448,7 +1383,6 @@
         if (e.keyCode == 13) {
           e.preventDefault();
           searchInputField(this.value);
-          //$(this).autocomplete('close');
           $(this).blur();
         }
       });
