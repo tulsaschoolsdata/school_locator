@@ -9,12 +9,10 @@
     <meta http-equiv="expires" content="-1">
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 11:00:00 GMT">
     <meta http-equiv="pragma" content="no-cache">
-
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
     <!-- Icons -->
-
     <link rel="shortcut icon" href="images/favicon.ico"/>
     <link rel="apple-touch-icon" href="images/nonretina76x76.png" sizes="76x76"/>
     <link rel="apple-touch-icon" href="images/iphone120x120.png" sizes="120x120"/>
@@ -23,9 +21,7 @@
     <title>TPS School Locator</title>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBgH1Z_xKIjf1FVwvexUWfW-2FEhUjvF8&libraries=places"></script>
-
     <script src="https://www.google.com/jsapi"></script>
-
     <script src="scripts/jquery-1.11.1.min.js"></script>
     <script src="scripts/map.js?v=2.99"></script>
     <script src="scripts/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
@@ -48,7 +44,6 @@
     <link href="scripts/jqueryui/jquery-ui.css" rel="stylesheet">
 
     <!-- <script src="scripts/jquery.geocomplete.min.js"></script> -->
-
     <link href="scripts/bootstrap-3.3.4-dist/css/bootstrap.min.css" media="all" rel="stylesheet"/>
     <link href="scripts/font-awesome-4.3.0/css/font-awesome.min.css" media="all" rel="stylesheet">
     <link href="styles/map.css?v=2.99" media="all" rel="stylesheet"/>
@@ -95,7 +90,6 @@
           } else {
             //$('#collapseButtons').collapse('hide');
           }
-
           adjustResultsHeight();
         });
 
@@ -240,12 +234,10 @@
 
       });
     </script>
-
   </head>
 
   <body>
-
-    <a id="btnCPSedu" href="http://www.tulsaschools.org" target="_blank" class="tps-logo">
+    <a id="btnTPSedu" href="http://www.tulsaschools.org" target="_blank" class="tps-logo">
       <img class="hidden-xs" src="images/tps_logo.png"/>
       <img class="visible-xs-block" src="images/tps_logo.png"/>
     </a>
@@ -281,7 +273,6 @@
 
     <!-- RESULTS -->
     <div id="divResultsContainer" class="container-fluid collapse in">
-
       <div id="pinLocAlertContainer" class="container-fluid">
         <div class="row">
           <div id="pinLocAlert" class="alert alert-info-blue alert-dismissible clearfix" role="alert">
@@ -290,7 +281,6 @@
               <span id="txtTierLoc"></span></div>
             <div class="col-xs-10" style="line-height:1.1em; padding:2px 0 0 5px; font-size: .875em;">
               <span id="txtGeoLoc"></span>
-
             </div>
             <div class="col-xs-1" style="padding-left:0px; padding-right:5px;">
               <button type="button" class="close close-lg closepinloc" onclick="$('#pinLocAlert').hide();" aria-label="Close">
@@ -314,49 +304,39 @@
       </div>
 
       <div id="divResultsCollapse" class="collapse in">
-
         <div id="resultListContainer">
           <div id="resultList"></div>
         </div>
-
         <!-- Extraswrapper contains the '*Attendance grades within boundary' message-->
         <div id="extraswrapper" class="collapse in">
           <div id="boundaryAsterisk"></div>
           <!-- <div id="safepassdiv"></div> -->
         </div>
-
         <!-- moreSchoolsRow contains buttons and filters -->
         <div id="moreSchoolsRow" class="container-fluid">
-
           <!-- row contains the More Schools, School Ratings, and Filter Results buttons-->
           <div class="row" style="background-color:#fff; padding:5px 0px;">
             <div class="col-xs-12">
               <div class="clearfix">
-
                 <button type="button" id="btnSearchRadius" class="btn btn-default btn-xs">
                   <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
                   More Schools
                 </button>
-
                 <button type="button" id="lnkRating" class="btn btn-default btn-xs pull-right ratings" onclick="setPerformanceRatingData();">
                   <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
                   School Ratings
                 </button>
-
                 <button type="button" id="btnShowFilters" class="btn btn-default btn-xs" data-toggle="collapse" data-target="#filterresults" aria-expanded="false" aria-controls="filterresults">
                   Filter Results
                 </button>
-
               </div>
             </div>
           </div>
 
           <!-- filterresults contains the filter options and the buttons -->
           <div id="filterresults" class="row collapse" style="background-color:#FFFFFF;">
-
             <!-- filteraccordion contains the filter options -->
             <div id="filteraccordion" class="panel-group refineDropdown" style="margin-bottom:0; padding-top:5px;" role="tablist" aria-multiselectable="true">
-
               <div class="panel panel-default panel-filtered">
                 <div class="panel-heading" role="tab" id="headingOneFiltered">
                   <h4 class="panel-title">
@@ -368,9 +348,7 @@
                       <button class="btn btn-primary btn-xs" type="button" data-toggle="collapse" data-target="#collapseGradeCategoryHelp" aria-expanded="false" aria-controls="collapseGradeCategoryHelp">?</button>
                     </span>
                   </h4>
-
                   <div class="collapse" id="collapseGradeCategoryHelp">
-
                     <h4>
                       Neighborhood schools
                       <br/>
@@ -400,14 +378,12 @@
                       <img src="images/orange_c.png" width="14" height="20" alt="Charter Middle School" title="Charter Middle School">
                       <img src="images/red_c.png" width="14" height="20" alt="Charter High School" title="Charter High School"></h4>
                     <p>
-                      Charter schools are public schools that are independently operated. Charter schools are open to all Chicago children but an application and sometimes a lottery is required for enrollment. These schools are marked with a CH inside their map pin.
+                      Charter schools are public schools that are independently operated. Charter schools are open to all Tulsa children but an application and sometimes a lottery is required for enrollment. These schools are marked with a CH inside their map pin.
                     </p>
                   </div>
                 </div>
-
                 <div id="collapseOneFiltered" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                   <div class="panel-body">
-
                     <ul class='options-v clearfix'>
                       <li>
                         <input type='checkbox' id='st1'/>
@@ -420,7 +396,6 @@
                           <a href="#" class="markerhelp" rel="tooltip" title="Charter Elementary School">
                             <img src="images/blue_c.png" width="14" height="20" alt="Charter Elementary School" title=""></a>
                         </div>
-
                       </li>
                       <li>
                         <input type='checkbox' id='st2'/>
@@ -433,7 +408,6 @@
                           <a href="#" class="markerhelp" rel="tooltip" title="Charter Middle School">
                             <img src="images/orange_c.png" width="14" height="20" alt="Charter Middle School" title=""></a>
                         </div>
-
                       </li>
                       <li>
                         <input type='checkbox' id='st3'/>
@@ -454,7 +428,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="panel panel-default panel-filtered">
                 <div class="panel-heading" role="tab" id="headingTwoFiltered">
                   <h4 class="panel-title">
@@ -467,12 +440,10 @@
                     </span>
                   </h4>
                   <div class="collapse" id="collapsePerformanceRatingHelp">
-
                     <p style="margin-bottom:10px; margin-top:10px;">
                       A Performance Rating for a school is based on the school&#39;s score on the Performance Policy. To learn more, visit:
                       <a href="http://cps.edu/performance/" target="_blank" class="perfpoplink">http://cps.edu/performance/</a>
                     </p>
-
                     <h4>
                       LEVEL 1+
                       <img src="images/Level_1a_small.png" width="20" height="20" alt="Level 1+ Rating" title="Level 1+ Rating"></h4>
@@ -500,12 +471,9 @@
                       Schools not having enough data for a Performance Policy rating.
                     </p>
                   </div>
-
                 </div>
-
                 <div id="collapseTwoFiltered" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                   <div class="panel-body">
-
                     <ul class='options-v'>
                       <li>
                         <span class="green-dark">
@@ -518,7 +486,6 @@
                           <a href="#" class="markerhelp" rel="tooltip" title="LEVEL 1+">
                             <img src="images/Level_1a_small.png" width="20" height="21" alt="LEVEL 1+" title=""></a>
                         </div>
-
                       </li>
                       <li>
                         <span class="green-light">
@@ -531,7 +498,6 @@
                           <a href="#" class="markerhelp" rel="tooltip" title="LEVEL 1">
                             <img src="images/Level_1_small.png" width="20" height="21" alt="LEVEL 1" title=""></a>
                         </div>
-
                       </li>
                       <li>
                         <span class="yellow-dark">
@@ -544,7 +510,6 @@
                           <a href="#" class="markerhelp" rel="tooltip" title="LEVEL 2+">
                             <img src="images/Level_2a_small.png" width="20" height="21" alt="LEVEL 2+" title=""></a>
                         </div>
-
                       </li>
                       <li>
                         <span class="red-light">
@@ -556,9 +521,7 @@
                         <div class="pull-right" style="text-indent:0px;  width:40px;">
                           <a href="#" class="markerhelp" rel="tooltip" title="LEVEL 2">
                             <img src="images/Level_2_small.png" width="20" height="21" alt="LEVEL 2" title=""></a>
-
                         </div>
-
                       </li>
                       <li>
                         <span class="red-dark">
@@ -570,9 +533,7 @@
                         <div class="pull-right" style="text-indent:0px;  width:40px;">
                           <a href="#" class="markerhelp" rel="tooltip" title="LEVEL 3">
                             <img src="images/Level_3_small.png" width="20" height="21" alt="LEVEL 3" title=""></a>
-
                         </div>
-
                       </li>
                       <li>
                         <span id="perf-label-black">
@@ -590,7 +551,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="panel panel-default panel-filtered hidden">
                 <div class="panel-heading" role="tab" id="headingFourFiltered">
                   <h4 class="panel-title">
@@ -602,19 +562,15 @@
                       <button class="btn btn-primary btn-xs" type="button" data-toggle="collapse" data-target="#collapseProgramsOfferedHelp" aria-expanded="false" aria-controls="collapseSchoolClassificationHelp">?</button>
                     </span>
                   </h4>
-
                   <div class="collapse" id="collapseProgramsOfferedHelp">
                     <h4>How does the Programs Offered filter work?</h4>
                     <p>
                       The Programs Offered filter will display the schools who have the selected program type. You must click Show All Schools or Search by Address to get results.
                     </p>
                   </div>
-
                 </div>
-
                 <div id="collapseFourFiltered" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                   <div class="panel-body">
-
                     <ul class='options-v'>
                       <li>
                         <span class="label-grey">
@@ -645,7 +601,6 @@
                 </div>
               </div>
             </div>
-
             <!-- Update and Reset buttons - Advanced (Filtered) Search -->
             <div class="col-xs-12" style="margin-top:10px; margin-bottom:20px;">
               <button id="btnAdvancedSearchGo2" type="button" onclick="filteredSearch();" class="btn btn-primary btn-md btnAdvancedSearchGo2">
@@ -657,13 +612,9 @@
                 Reset
               </button>
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
 
     <!-- Detail Container displays school specific data. Toggles with ResultList displays -->
@@ -671,44 +622,37 @@
 
     <!-- Buttons located on the right side of the screen, displayed on Mobile only -->
     <div id="divButtonContainer2">
-
       <button type="button" id="btnShowButtons" class="btnShowButtons visible-xs-block btnXS" data-toggle="collapse" data-target="#collapseButtons" aria-expanded="false" aria-controls="collapseButtons">
         <span class="fa-stack fa-2x">
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-ellipsis-v fa-stack-1x fa-inverse"></i>
         </span>
       </button>
-
       <div id="collapseButtons" class="collapse clearfix">
-
         <button id="btnHelp" type="button" class="btnHelp pull-right btnXS markerhelp2" data-toggle="tooltip" title="Info">
           <span class="fa-stack fa-2x">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-info fa-stack-1x fa-inverse"></i>
           </span>
         </button>
-
         <button id="btnAdvancedSearch" type="button" class="btnAdvancedSearch pull-right btnXS markerhelp2" data-toggle="tooltip" title="Overlays">
           <span class="fa-stack fa-2x">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-align-justify fa-stack-1x fa-inverse"></i>
           </span>
         </button>
-
         <button id="btnFindMe" type="button" onclick="findMe(); return false;" class="btnFindMe pull-right  btnXS markerhelp2" data-toggle="tooltip" title="Find Schools Around Me">
           <span class="fa-stack fa-2x">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-location-arrow fa-stack-1x fa-inverse"></i>
           </span>
         </button>
-
         <button id="btnResetMap" type="button" onclick="resetmap();" class="btnResetMap pull-right btnXS markerhelp2" data-toggle="tooltip" title="Reset Map" data-placement="left">
           <span class="fa-stack fa-2x">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-refresh fa-stack-1x fa-inverse"></i>
           </span>
         </button>
-
       </div>
     </div>
 
@@ -765,7 +709,7 @@
                   data-toggle="popover"
                   data-placement="auto top"
                   title="School Rating <i class='fa fa-times-circle pull-right' onclick='hideAllPopovers();'></i>"
-                  data-content="The school rating is based on the CPS School Quality Rating Policy (SQRP). To learn more, visit: <a href='http://cps.edu/sqrp' target='_blank'>http://cps.edu/sqrp</a>.">
+                  data-content="The school rating is based on the TPS School Quality Rating Policy (SQRP). To learn more, visit: <a href='http://cps.edu/sqrp' target='_blank'>http://cps.edu/sqrp</a>.">
                   <i class="fa fa-info-circle"></i>
                 </button>
               </th>
@@ -903,47 +847,38 @@
 
     <!-- Slideout contains the info panel -->
     <div id="divHelpContainer">
-
       <div id="divHelp">
-
         <div class="container-fluid height100 backgroundfillwhite">
-
           <button id="btnHelp2" type="button" class="btnHelp2 btnHelp">
             <span class="fa-stack fa-2x">
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-close fa-stack-1x fa-inverse"></i>
             </span>
           </button>
-
           <div class="row backgroundfillwhite">
             <div class="col-xs-12">
               <h2 style="color:#36C; padding-bottom:20px">Information</h2>
               <p>
                 <strong>Attendance Boundary Questions?</strong>
-                Neighborhood attendance boundaries can only be officially confirmed through the Office of Planning and Data Management at 773.553.3270.<br/>
+                Neighborhood attendance boundaries can only be officially confirmed through the Data Strategy and Analytics team at 918-746-6373.<br/>
                 <br/>
                 <strong>Enrollment Questions?</strong>
-                Questions regarding specific enrollment procedures should be directed to the Office of Access and Enrollment at 773.553.2060.
+                Questions regarding specific enrollment procedures should be directed to the Enrollment Center at 918.746.7500.
                 <br/>
                 <br/>
               </p>
             </div>
           </div>
-
           <div class="row backgroundfillwhite">
             <div class="col-xs-12" style="padding-bottom:10px;">
               <button id="btnStartTour" type="button" class="btn btn-default col-xs-12 btnHelp2" onclick="trackTour(); startTour();">Take the Tour</button>
             </div>
           </div>
-
           <div class="row backgroundfillwhite">
             <div class="col-xs-12" style="padding-bottom:10px;">
               <button type="button" class="btn btn-default col-xs-12 btnMapLegend" data-toggle="collapse" data-target="#collapseLegend" aria-expanded="false" aria-controls="collapseLegend">Map Legend</button>
-              <!-- Legend -->
               <div id="collapseLegend" class="collapse backgroundfillwhite">
-
                 <div class="height100 backgroundfillwhite">
-
                   <ul class="list-group" style="margin-top: 34px;">
                     <li class="list-group-item">
                       <div class="label-blue"><img src="images/blue_blank.png" width="14" height="20" alt="Attendance Area Elementary School" title=""/>
@@ -954,7 +889,6 @@
                       <div class="label-blue"><img src="images/blue_c.png" width="14" height="20" alt="Charter Elementary School" title=""/>
                         Charter Elementary School</div>
                     </li>
-
                     <li class="list-group-item">
                       <div class="label-orange"><img src="images/orange_blank.png" width="14" height="20" alt="Attendance Area Middle School" title="">
                         Attendance Area Middle School</div>
@@ -963,7 +897,6 @@
                       <div class="label-orange"><img src="images/orange_c.png" width="14" height="20" alt="Charter Middle School" title="">
                         Charter Middle School</div>
                     </li>
-
                     <li class="list-group-item">
                       <div class="label-red"><img src="images/red_blank.png" width="14" height="20" alt="Attendance Area High School" title="">
                         Attendance Area High School</div>
@@ -972,7 +905,6 @@
                       <div class="label-red"><img src="images/red_c.png" width="14" height="20" alt="Charter High School" title="">
                         Charter High School</div>
                     </li>
-
                     <li class="list-group-item">
                       <span style="width:15px; height:5px; background-color:#ff00ff; margin:8px 5px 0 0; display:block; float:left;">&nbsp;</span>Safe Passage Route
                     </li>
@@ -981,25 +913,20 @@
                         Pin Drop Location</div>
                     </li>
                   </ul>
-
                 </div>
               </div>
             </div>
           </div>
-
           <div class="row backgroundfillwhite">
             <div class="col-xs-12" style="padding-bottom:10px;">
               <button type="button" class="btn btn-default col-xs-12 btnFAQ" data-toggle="collapse" data-target="#collapseFAQGuide" aria-expanded="false" aria-controls="collapseFAQGuide">FAQ</button>
-              <!-- FAQ -->
               <div id="collapseFAQGuide" class="collapse backgroundfillwhite">
-
                 <div class="height100 backgroundfillwhite">
                   <div class="well">
                     <h1>School Locator - Frequently Asked Questions</h1>
-
                     <h3>What is the school locator tool?</h3>
                     <p>
-                      The school locator allows you to search for CPS schools by name, address and zip code. Results can be viewed in a variety of ways including by attendance boundary, ward, neighborhood or zip code.
+                      The school locator allows you to search for TPS schools by name, address and zip code. Results can be viewed in a variety of ways including by attendance boundary, ward, neighborhood or zip code.
                     </p>
                     <h3>What information is available on the map?</h3>
                     <p>
@@ -1031,7 +958,7 @@
                     </p>
                     <h3>What is an overlay?</h3>
                     <p>
-                      An overlay is a transparent layer of additional information that appears on top of the existing map to help denote specific boundaries or regions. For example, a zip code overlay will show boundaries for all the zip codes in Chicago. Click on a
+                      An overlay is a transparent layer of additional information that appears on top of the existing map to help denote specific boundaries or regions. For example, a zip code overlay will show boundaries for all the zip codes in Tulsa. Click on a
                       specific boundary area on the map to see more details about that area.
                     </p>
                     <h3>
@@ -1058,7 +985,6 @@
               </div>
             </div>
           </div>
-
           <div class="row backgroundfillwhite">
             <div class="col-xs-12">
               <p>
@@ -1074,9 +1000,7 @@
 
     <!-- Overlay Container -->
     <div id="divAdvancedContainer">
-
       <div id="divAdvanced">
-
         <div class="container-fluid height100 backgroundfillwhite">
           <button id="btnAdvancedSearch2" type="button" class="btnAdvancedSearch2 btnAdvancedSearch">
             <span class="fa-stack fa-2x">
@@ -1087,9 +1011,7 @@
           <div class="row backgroundfillwhite">
             <div class="col-xs-12">
               <h2 style="color:#36C; padding-bottom:20px;padding-right:40px;">Overlays</h2>
-
               <div id="accordion" class="panel-group refineDropdown" style="margin-bottom:0;" role="tablist" aria-multiselectable="true">
-
                 <div class="panel panel-default">
                   <div class="panel-heading" role="tab" id="headingFive">
                     <h4 class="panel-title">
@@ -1101,21 +1023,19 @@
                         <button class="btn btn-primary btn-xs" type="button" data-toggle="collapse" data-target="#collapseOverlaysHelp" aria-expanded="false" aria-controls="collapseOverlaysHelp">?</button>
                       </span>
                     </h4>
-
                     <div class="collapse" id="collapseOverlaysHelp">
                       <h4>What is an overlay?</h4>
                       <p>
                         An overlay is a transparent layer of additional information that appears on top of the existing map to help denote specific boundaries or regions.
                         <br/>
                         <br/>
-                        For example, a zip code overlay will show boundaries for all the zip codes in Chicago. Click on a specific boundary area on the map to see more details about that area.
+                        For example, a zip code overlay will show boundaries for all the zip codes in Tulsa. Click on a specific boundary area on the map to see more details about that area.
                       </p>
                     </div>
                   </div>
 
                   <div id="collapseFive" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFive">
                     <div class="panel-body">
-
                       <h4>
                         Attendance Boundaries
                         <span style='float: right; padding: 0px 10px 0px 0px;'>
@@ -1150,7 +1070,6 @@
                             </label>
                           </span>
                         </li>
-
                         <li>
                           <span class="label-purple">
                             <label for='abType15'>
@@ -1158,31 +1077,27 @@
                               Charter School Preference Boundary
                             </label>
                           </span>
-
                           <span class="pull-right">
                             <button class="btn btn-primary btn-xs" type="button" data-toggle="collapse" data-target="#collapseCharterHelp" aria-expanded="false" aria-controls="collapseCharterHelp">?</button>
                           </span>
-
                           <div class="collapse well well-sm" id="collapseCharterHelp">
                             <h4>Charter School Preference Boundary</h4>
                             <p>
                               Students residing within the overlay preference boundary of the school will be given priority for enrollment over those students who reside outside of the overlay preference boundary.
                             </p>
                           </div>
-
+                        </li>
                       </ul>
-
                       <h4>Geographic Overlays</h4>
                       <ul class='options-v'>
                         <li>
                           <span class="label-blue">
                             <label for='abType5'>
                               <input name='abType' type='radio' id='abType5' onclick='toggleBoundary("close");'/>
-                              CPS Networks
+                              TPS Networks
                             </label>
                           </span>
                         </li>
-
                         <li>
                           <span class="label-pink">
                             <label for='abType16'>
@@ -1190,18 +1105,16 @@
                               Safe Passage Routes
                             </label>
                           </span>
-
                           <span class="pull-right">
                             <button class="btn btn-primary btn-xs" type="button" data-toggle="collapse" data-target="#collapseSafePassageHelp" aria-expanded="false" aria-controls="collapseSafePassageHelp">?</button>
                           </span>
-
                           <div class="collapse well well-sm" id="collapseSafePassageHelp">
                             <h4>Safe Passage Routes</h4>
                             <p>
-                              Your child's safety is among our top priorities. Chicago Public Schools, in partnership with parents, the Chicago Police Department (CPD) and City of Chicago, has expanded the District's successful Safe Passage Program to provide safe routes to and
+                              Your child's safety is among our top priorities. Tulsa Public Schools, in partnership with parents, the Tulsa Police Department (TPD) and City of Tulsa, has expanded the District's successful Safe Passage Program to provide safe routes to and
                               from school every day for your child.
                               <br/><br/>
-                              This map presents the Safe Passage Route specially designed for your school, which was created with direct input from CPD and parents within your community.
+                              This map presents the Safe Passage Route specially designed for your school, which was created with direct input from TPD and parents within your community.
                               <br/><br/>
                               Routes that are shared by more than one school overlap each other on the map. To view the route for a particular school, search for the school and the route will display on the map.
                             </p>
@@ -1211,28 +1124,24 @@
                           <span class="label-tiers">
                             <label for='abType10'>
                               <input name='abType' type='radio' id='abType10' onclick='toggleBoundary("close");'/>
-                              CPS Tiers
+                              TPS Tiers
                             </label>
                           </span>
-
                           <span class="pull-right">
-                            <button class="btn btn-primary btn-xs" type="button" data-toggle="collapse" data-target="#collapseCPSTiersHelp" aria-expanded="false" aria-controls="collapseCPSTiersHelp">?</button>
+                            <button class="btn btn-primary btn-xs" type="button" data-toggle="collapse" data-target="#collapseTPSTiersHelp" aria-expanded="false" aria-controls="collapseTPSTiersHelp">?</button>
                           </span>
-
-                          <div class="collapse well well-sm" id="collapseCPSTiersHelp">
-                            <h4>CPS Tiers</h4>
+                          <div class="collapse well well-sm" id="collapseTPSTiersHelp">
+                            <h4>TPS Tiers</h4>
                             <div class=" clearfix">
                               <div style='width:24%; line-height:2em; background-color:#BAC8D6; color:#fff; float:left; text-align:center; '>Tier 1</div>
                               <div style='width:24%; line-height:2em; background-color:#8CA3BA; color:#fff; float:left; text-align:center; '>Tier 2</div>
                               <div style='width:24%; line-height:2em; background-color:#476C91; color:#fff; float:left; text-align:center; '>Tier 3</div>
                               <div style='width:24%; line-height:2em; background-color:#194775; color:#fff; float:left; text-align:center; '>Tier 4</div>
                             </div>
-
                             <p style="padding-top:10px;">
-                              Chicago Public Schools divides areas of the city into one of four socio-economic tiers by looking at each area's median income, education level, home-ownership rates, single-parent family rates, rates of English-speaking, and neighborhood school
+                              Tulsa Public Schools divides areas of the city into one of four socio-economic tiers by looking at each area's median income, education level, home-ownership rates, single-parent family rates, rates of English-speaking, and neighborhood school
                               performance.
                             </p>
-
                           </div>
                         </li>
                         <li>
@@ -1243,7 +1152,6 @@
                             </label>
                           </span>
                         </li>
-
                         <li>
                           <span class="label-zipcode">
                             <label for='abType9'>
@@ -1252,7 +1160,6 @@
                             </label>
                           </span>
                         </li>
-
                         <li>
                           <span class="label-wards">
                             <label for='abType17'>
@@ -1261,7 +1168,6 @@
                             </label>
                           </span>
                         </li>
-
                         <li>
                           <span class="label-senate">
                             <label for='abType18'>
@@ -1270,9 +1176,7 @@
                             </label>
                           </span>
                         </li>
-
                       </ul>
-
                       <h4>Political Overlays</h4>
                       <ul class='options-v'>
                         <li>
@@ -1287,7 +1191,7 @@
                           <span class="label-house">
                             <label for='abType11'>
                               <input name='abType' type='radio' id='abType11' onclick='toggleBoundary("close");'/>
-                              Illinois House District
+                              Oklahoma House District
                             </label>
                           </span>
                         </li>
@@ -1295,7 +1199,7 @@
                           <span class="label-senate">
                             <label for='abType12'>
                               <input name='abType' type='radio' id='abType12' onclick='toggleBoundary("close");'/>
-                              Illinois Senate District
+                              Oklahoma Senate District
                             </label>
                           </span>
                         </li>
@@ -1308,11 +1212,9 @@
                           </span>
                         </li>
                       </ul>
-
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -1346,7 +1248,7 @@
           </div>
           <div class="modal-body">
             Please visit
-            <a href='https://chicagoearlylearning.org/' target='_blank'>Chicago Early Learning</a>
+            <a href='https://chicagoearlylearning.org/' target='_blank'>Tulsa Early Learning</a>
             for early childhood programs.
           </div>
           <div class="modal-footer">
@@ -1366,7 +1268,7 @@
           </div>
           <div class="modal-body">
             This feature requires a secure connection.<br/>
-            <a href='https://cps.edu/ScriptLibrary/Map-SchoolLocator/index.html'>Continue to the secure CPS School Locator</a>
+            <a href='https://cps.edu/ScriptLibrary/Map-SchoolLocator/index.html'>Continue to the secure TPS School Locator</a>
             and click the 'Find Schools Around Me' button again.
           </div>
           <div class="modal-footer">
@@ -1377,9 +1279,7 @@
     </div>
 
     <script>
-
       $("#autocomplete").keydown(function (e) {
-
         if (e.keyCode == 13) {
           e.preventDefault();
           searchInputField(this.value);
@@ -1387,6 +1287,5 @@
         }
       });
     </script>
-
   </body>
 </html>
