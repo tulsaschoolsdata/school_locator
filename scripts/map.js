@@ -16,7 +16,6 @@ var ZipcodeTableId = "1uv4fLfrGKW52CJfOSFCiS8-H9ESqlRM1WB-XGgM";
 var TiersTableId = "1V6Bw67XxKNLri6R028gKPirNLvmDjA4TLFj0Ynwx"; //  2017
 var CHattendanceTableId = "1OWvbNRylDS2Ji9Lf_ArJxYHm1N7yf1GeSTOpaC_K"; //  2017
 var SafePassageTableID = "1EW4rmZItJgBzR8oxiciDVVHvr5JcDjFthJYggWBD"; //  2017
-var ESattendanceTableId = "1l3hIcuMMykh84WhqZqpAFkR9mA153Ciu3AUYpH1F"; //  2017
 var MSattendanceTableId = "1u889YvI7BmIyCl1q5fiG5h3KMKKGj2qhDKfVVF3U"; //  2017
 var HSattendanceTableId = "12LEhnOwOLOryT8V4KwaKztexyGoWYI5nxm3g2FWh"; //  2017
 var ILhouseTableId = "159V9gvYipig2O_ZS4fL7icjP9-imRqJtt4EZM7yb"; //  2017
@@ -77,7 +76,7 @@ var filtersForDisplay = [];
 function initializeMap() {
  SafePassage = new google.maps.FusionTablesLayer( SafePassageTableID );
  CHattendance = new google.maps.FusionTablesLayer( CHattendanceTableId );
- ESattendance = new google.maps.FusionTablesLayer( ESattendanceTableId );
+ ESattendance = new google.maps.KmlLayer({url: 'https://github.com/tulsaschoolsdata/school_locator/blob/development/lib/tps_elem_boundaries_2020_0.kml', map: map });
  MSattendance = new google.maps.FusionTablesLayer( MSattendanceTableId );
  HSattendance = new google.maps.FusionTablesLayer( HSattendanceTableId );
  Networks = new google.maps.FusionTablesLayer( NetworksTableId );
